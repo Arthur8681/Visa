@@ -20,6 +20,6 @@ from Agency import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test', views.show)
+    path('main', views.show)
 
 ]
