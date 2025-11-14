@@ -18,11 +18,47 @@ header {
     justify-content: center;
     gap: 40px;
     font-size: larger;
-    padding: 30px 10px;
+    padding: 10px 10px;
     z-index: 100;
 }
 
 
 header a {
     color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+
+.underline-animation {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 4px;
+    margin: 20px;
+    transition: color 0.3s ease-in-out;
+
+
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.underline-animation:hover {
+    color: white;
+}
+
+.underline-animation:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
 }
